@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" width="100%">
+        <tr>
+            <td valign="top">
+                <ul>
+                    <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
+                    <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
+                    <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
+                    <li><a href="/Kanbas/Calendar/Home/screen.html">Calendar</a></li>
+                    <li><a href="/Kanbas/Inbox/Home/screen.html">Inbox</a></li>
+                    <li><a href="/Kanbas/History/Home/screen.html">History</a></li>
+                    <li><a href="/Kanbas/Studio/Home/screen.html">Studio</a></li>
+                    <li><a href="/Kanbas/Commons/Home/screen.html">Commons</a></li>
+                    <li><a href="/Kanbas/Help/Home/screen.html">Help</a></li>
+
+                </ul>
+            </td>
+            <td valign="top">
+                <ul>
+                    <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+                    <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
+                    <li><a href="/Kanbas/Courses/Piazza/screen.html">Piazza</a></li>
+                    <li><a href="/Kanbas/Courses/ZoomMeetings/screen.html">Zoom Meetings</a></li>
+                    <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+                    <li><a href="/Kanbas/Courses/Quizzes/screen.html">Quizzes</a></li>
+                    <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                    <li><a href="/Kanbas/Courses/People/screen.html">People</a></li>
+                    <li><a href="/Kanbas/Courses/PanoptoVideo/screen.html">Panopto Video</a></li>
+                    <li><a href="/Kanbas/Courses/Discussions/screen.html">Discussions</a></li>
+                    <li><a href="/Kanbas/Courses/Announcements/screen.html">Announcements</a></li>
+                    <li><a href="/Kanbas/Courses/Pages/screen.html">Pages</a></li>
+                    <li><a href="/Kanbas/Courses/Files/screen.html">Files</a></li>
+                    <li><a href="/Kanbas/Courses/Rubrics/screen.html">Rubrics</a></li>
+                    <li><a href="/Kanbas/Courses/Outcomes/screen.html">Outcomes</a></li>
+                    <li><a href="/Kanbas/Courses/Collaborations/screen.html">Collaborations</a></li>
+                    <li><a href="/Kanbas/Courses/Syllabus/screen.html">Syllabus</a></li>
+                    <li><a href="/Kanbas/Courses/Settings/screen.html">Settings</a></li>
+                </ul>
+            </td>
+            <td valign="top">
+
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Courses</title>
+                    <style>
+                        .tabs {
+                            display: flex;
+                            list-style-type: none;
+                            padding: 0;
+                            margin-bottom: 20px;
+                            border-bottom: 1px solid #ddd;
+                        }
+
+                        .tabs li {
+                            margin-right: 10px;
+                            padding: 5px 10px;
+                        }
+
+                        .tabs li:hover {
+                            background-color: #f5f5f5;
+                            cursor: pointer;
+                        }
+
+                        .tab-content {
+                            display: none;
+                        }
+
+                        .active-tab {
+                            display: block;
+                        }
+
+                        .th-left {
+                            text-align: left;
+                        }
+                    </style>
+                </head>
+
+                <body>
+
+                    <nav>
+                        <ul class="tabs">
+                            <li onclick="showTab('courseDetails')">Course Details</li>
+                            <li onclick="showTab('sections')">Sections</li>
+                            <li onclick="showTab('navigation')">Navigation</li>
+                            <li onclick="showTab('apps')">Apps</li>
+                            <li onclick="showTab('featureOption')">Feature Option</li>
+                            <li onclick="showTab('integrations')">Integrations</li>
+                        </ul>
+                    </nav>
+
+                    <div id="courseDetails" class="tab-content active-tab">
+
+                        <h1>Courses Details</h1>
+
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Courses Details</title>
+                            <style>
+                                .container {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    width: 80%;
+                                    margin: 20px auto;
+                                }
+
+                                .names,
+                                .info {
+                                    width: 100%;
+                                    padding: 10px;
+                                }
+
+                                .name-item:not(:last-child),
+                                .info-item:not(:last-child) {
+                                    margin-bottom: 10px;
+                                }
+
+                                .th-left {
+                                    text-align: left;
+                                }
+                            </style>
+                        </head>
+
+                        <body>
+                            <table>
+                                <tbody>
+                                    <div class="image-container">
+                                        <label>Image:</label>
+                                        <input type="file" name="image" accept="image/*">
+                                    </div>
+                                    <tr>
+                                        <th class="th-left">Name:</th>
+                                        <td>CS4550 12631 Web Development SEC 01 Fall 2023 [BOS-1-TR]</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-left">Course Cods:</th>
+                                        <td>CS4550.12631.202410</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-left">Blueprint Course:</th>
+                                        <td>No</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-left">Course Template:</th>
+                                        <td>
+                                            <input type="checkbox" id="courseTemplate" name="courseTemplate">
+                                            <label for="courseTemplate">Enable course as Course Template</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-left">Time Zone:</th>
+                                        <td>
+                                            <select name="timezone">
+                                                <option value="EST">Eastern Standard Time (EST)</option>
+                                                <option value="CST">Central Standard Time (CST)</option>
+                                                <option value="MST">Mountain Standard Time (MST)</option>
+                                                <option value="PST">Pacific Standard Time (PST)</option>
+                                                <option value="AKST">Alaska Standard Time (AKST)</option>
+                                                <option value="HAST">Hawaii-Aleutian Standard Time (HAST)</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-left">SIS ID:</th>
+                                        <td>CS4550.12631.202410</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-left">Subaccount:</th>
+                                        <td style="color: red;">CS Undergrad</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-left">Term:</th>
+                                        <td>202410_1 Fall 2023 Semester Full Term</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-left">Participation:</th>
+                                        <td>
+                                            <select name="Term">
+                                                <option value="23fa">2023fall</option>
+                                                <option value="24sp">2023Spring</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-left">Start Time:</th>
+                                        <td><input type="datetime-local" name="startTime"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-left">End Time:</th>
+                                        <td><input type="datetime-local" name="endTime"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </body>
+                    </div>
+
+                    <div id="sections" class="tab-content">
+                        <p>Sections</p>
+                    </div>
+
+                    <div id="navigation" class="tab-content">
+                        <h2>Drag and drop items to reorder them in the course navigation.</h2>
+                        <button class="nav-button">Home</button>
+                        <button class="nav-button">Assignments</button>
+                        <button class="nav-button">Grades</button>
+
+                        <style>
+                            .nav-button {
+                                display: block;
+                                width: 100%;
+                                padding: 10px 15px;
+                                margin-top: 10px;
+                                font-size: 16px;
+                                cursor: pointer;
+                            }
+                        </style>
+                    </div>
+
+                    <div id="apps" class="tab-content">
+                        <p>Apps</p>
+                    </div>
+
+                    <div id="featureOption" class="tab-content">
+                        <p>Feature Option</p>
+                    </div>
+
+                    <div id="integrations" class="tab-content">
+                        <p>Integrations</p>
+                    </div>
+
+                    <script>
+                        function showTab(tabId) {
+                            var contents = document.querySelectorAll('.tab-content');
+                            for (var i = 0; i < contents.length; i++) {
+                                contents[i].classList.remove('active-tab');
+                            }
+                            document.getElementById(tabId).classList.add('active-tab');
+                        }
+                    </script>
+                </body>
+            </td>
+</body>
+
+</html>
