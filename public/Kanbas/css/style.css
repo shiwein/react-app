@@ -1,0 +1,110 @@
+:root {
+    --min-margin: 5px;
+    --max-margin: 10px;
+}
+
+
+body {
+    background-color: white;
+    width: 100%;
+}
+
+td {
+    vertical-align: top;
+}
+
+li {
+    list-style-type: none;
+    color: black;
+}
+
+li a {
+    color: red;
+}
+
+.sidebar {
+    background-color: black;
+    width: 85px;
+    height: 75px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar a:visited {
+    color: white;
+}
+
+.sidebar a:hover {
+    color: red;
+    text-decoration: underline;   
+}
+
+.sidebar li {
+    background-color: black;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.sidebar li:hover
+/* .sidebar li.default-selected */
+{
+    background-color: white;
+}
+
+.sidebar li:hover a,
+.sidebar li.default-selected a {
+    color: red;
+}
+
+.sidebar ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidebar ul li a i {
+    color: red;
+    font-size: 30px;
+}
+
+.sidebar ul li a i.account-icon {
+    color: white;
+    font-size: 30px;
+}
+
+/* 设置account-icon的颜色为白色 */
+.account-icon {
+    color: white;
+}
+
+.sidebar li label, .sidebar li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;  /* 确保文本在行内居中 */
+    justify-content: center; /* 在垂直方向上居中内容 */
+}
+
+.content-area li {
+    margin-bottom: 20px; /* 你可以根据需要调整此值 */
+}
+
+/* 为侧边栏内的图标设置间距 */
+.sidebar a i {
+    margin-bottom: var(--min-margin); /* 这会在图标和文字之间设置一个间距 */
+}
+
+/* 为侧边栏内的链接设置间距 */
+.sidebar a {
+    margin: var(--min-margin) 0; /* 这会设置链接的上下间距 */
+}
+
+/* 为侧边栏的链接设置内部间距 */
+.sidebar a {
+    padding: var(--min-padding) var(--max-padding); /* 顶部和底部使用最小内部间距，左侧和右侧使用最大内部间距 */
+}
+
+
