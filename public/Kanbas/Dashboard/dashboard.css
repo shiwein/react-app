@@ -1,0 +1,42 @@
+/* Dashboard */
+
+.publish-Courses {
+    margin: 30px 0 0 30px;
+}
+
+/* 尽量不要直接限制列的高度，除非绝对必要 */
+.wb-dashboard-grid .col {
+    width: 270px;
+    height: 200px;
+    /* height: 210px; */
+}
+
+/* 确保卡片本身没有边距或填充 */
+.wb-dashboard-grid .card {
+    margin: 0;
+    padding: 0;
+    margin: 30px 0 0 30px;
+    /* 其他样式 */
+}
+
+/* 确保卡片内容也没有额外的边距或填充 */
+.wb-dashboard-grid .card-body {
+    margin: 0;
+    padding: 0;
+    /* 其他样式 */
+}
+
+.wb-dashboard-grid .card h5 {
+    white-space: nowrap; /* 不换行 */
+    overflow: hidden; /* 隐藏溢出的文本 */
+    text-overflow: ellipsis; /* 使用省略号表示被剪切的文本 */
+    padding: 0 4px; /* 添加一些内边距，根据你的设计进行调整 */
+}
+
+.wb-dashboard-grid .card p {
+    display: -webkit-box; /* 使用 -webkit-box 模型，-webkit-line-clamp 才会生效 */
+    -webkit-line-clamp: 2; /* 限制在块级容器中显示的文本的行数 */
+    -webkit-box-orient: vertical; /* 定义盒子的方向是垂直的 */
+    overflow: hidden; /* 隐藏多余内容 */
+    padding: 0 4px; /* 添加一些内边距，根据你的设计进行调整 */
+}

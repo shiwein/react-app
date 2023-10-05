@@ -3,7 +3,6 @@
     --max-margin: 10px;
 }
 
-
 body {
     background-color: white;
     width: 100%;
@@ -15,7 +14,6 @@ td {
 
 li {
     list-style-type: none;
-    color: black;
 }
 
 li a {
@@ -40,25 +38,40 @@ li a {
 
 .sidebar a:hover {
     color: red;
-    text-decoration: underline;   
+    text-decoration: underline;
+}
+
+.sidebar li.active {
+    background-color: white;
+}
+
+.sidebar li.active a,
+.sidebar li.active a i {
+    color: red;
 }
 
 .sidebar li {
     background-color: black;
     padding: 10px;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 }
 
 .sidebar li:hover
+
 /* .sidebar li.default-selected */
-{
+    {
     background-color: white;
 }
+
+
 
 .sidebar li:hover a,
 .sidebar li.default-selected a {
     color: red;
 }
+
+
+
 
 .sidebar ul {
     padding-left: 0;
@@ -75,36 +88,88 @@ li a {
     font-size: 30px;
 }
 
+.sidebar
+
 /* 设置account-icon的颜色为白色 */
-.account-icon {
-    color: white;
+.list-group {
+    border-radius: 0%;
 }
 
-.sidebar li label, .sidebar li a {
+.list-group-item {
+    color: red;
+    background-color: var(--bs-list-group-bg);
+    border: none;
+}
+
+.list-group-item.active {
+    color: black;
+    background-color: white;
+    border-color: white;
+    border-left: 2px solid black;
+}
+
+
+.sidebar li label,
+.sidebar li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;  /* 确保文本在行内居中 */
-    justify-content: center; /* 在垂直方向上居中内容 */
-}
-
-.content-area li {
-    margin-bottom: 20px; /* 你可以根据需要调整此值 */
+    text-align: center;
+    /* 确保文本在行内居中 */
+    justify-content: center;
+    /* 在垂直方向上居中内容 */
 }
 
 /* 为侧边栏内的图标设置间距 */
 .sidebar a i {
-    margin-bottom: var(--min-margin); /* 这会在图标和文字之间设置一个间距 */
+    margin-bottom: var(--min-margin);
+    /* 这会在图标和文字之间设置一个间距 */
 }
 
 /* 为侧边栏内的链接设置间距 */
 .sidebar a {
-    margin: var(--min-margin) 0; /* 这会设置链接的上下间距 */
+    margin: var(--min-margin) 0;
+    /* 这会设置链接的上下间距 */
 }
 
 /* 为侧边栏的链接设置内部间距 */
 .sidebar a {
-    padding: var(--min-padding) var(--max-padding); /* 顶部和底部使用最小内部间距，左侧和右侧使用最大内部间距 */
+    padding: var(--min-padding) var(--max-padding);
+    /* 顶部和底部使用最小内部间距，左侧和右侧使用最大内部间距 */
 }
+
+.red-link {
+    color: red;
+}
+
+.red-button {
+    background-color: red;
+    color: aliceblue;
+    border: none;
+}
+.sidebar {
+    min-width: 150px;
+    max-width: 200px;
+
+    left: 0;
+    
+
+}
+.container {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 

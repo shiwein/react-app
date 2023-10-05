@@ -1,0 +1,54 @@
+.list-group-assignment {
+    border-left: 8px solid green;
+    width: 950px;
+    padding-left: 0;
+}
+
+.list-group-item-assignment {
+    color: black;
+    border: 1px solid #000;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-container {
+    margin-right: 15px;
+}
+
+.icon-container i {
+    font-size: 20px;
+}
+
+.list-group-item-light {
+    background-color: gray;
+}
+
+.list-group-item-assignment .fa-sticky-note-o {
+    color: green;
+}
+.list-group-item-assignment .fa-check {
+    color: green;
+}
+
+.list-group-assignment-one,
+.list-group-assignment-two,
+.list-group-assignment-three,
+.list-group-assignment-four{
+    width: 2%;
+    float: left;
+}
+.list-group-assignment-courses {
+    width: 90%;
+    float: left;
+}
+
+.content a {
+    color: black;
+    text-decoration: none; /* 如果你也想移除链接下的下划线 */
+}
+
+/* 如果你想要在鼠标悬停时改变颜色 */
+.content a:hover {
+    color: grey; 
+}
