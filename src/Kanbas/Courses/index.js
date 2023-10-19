@@ -1,6 +1,6 @@
 import React from "react";
 import db from "../../Kanbas/Database";
-import { Navigate, Route, Routes, useParams, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes, useParams,} from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import Home from "./Home";
@@ -13,7 +13,7 @@ import Discussions from "./Discussions";
 import Files from "./Files";
 import Outcomes from "./Outcomes";
 import Pages from "./Pages";
-import PanoptoVideo from "./PanoptoVideo";
+// import PanoptoVideo from "./PanoptoVideo";
 import People from "./People";
 import Piazza from "./Piazza";
 import Quizzes from "./Quizzes";
@@ -27,9 +27,9 @@ import "./index.css";
 
 function Courses() {
   const { courseId } = useParams();
-  const {courseNumber} = useParams();
+  // const {courseNumber} = useParams();
   const course = db.courses.find((course) => course._id === courseId);
-  const number =db.courses.find((course) => course.number ===courseNumber);
+  // const number =db.courses.find((course) => course.number ===courseNumber);
 
   return (
     <div>

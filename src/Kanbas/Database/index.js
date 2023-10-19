@@ -5,7 +5,7 @@ import enrollments from "./enrollments.json";
 import users from "./users.json"
 import grades from "./grades.json"
 
-export default {
+const data = {
   courses,
   modules,
   assignments,
@@ -13,3 +13,5 @@ export default {
   users,
   grades
 };
+
+export default data;

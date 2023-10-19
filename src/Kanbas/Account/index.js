@@ -1,19 +1,19 @@
 import React from "react";
-import { useParams, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Routes, Route, Navigate,} from "react-router-dom";
 // import db from "../Database";
 import AccountNavigation from "./AccountNavigation";
 import Notifications from "./Notifications";
 import Profile from "./Profile";
 import Files from "./Files";
 import Settings from "./Settings";
-import ePortfolios from "./ePortfolios";
+// import ePortfolios from "./ePortfolios";
 import SharedContent from "./SharedContent";
 import TheHub from "./TheHub";
 import QwicklyCourseTools from "./QwicklyCourseTools";
 import GlobalAnnouncements from "./GlobalAnnouncements";
 
 function Account() {
-  const { AccountId } = useParams();
+  // const { AccountId } = useParams();
   return (
     <div>
       <h1>Account</h1>
