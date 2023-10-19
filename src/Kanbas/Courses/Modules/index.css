@@ -1,0 +1,28 @@
+.wd-float-right {
+    float: right;
+    margin: 5px;
+}
+.red-button {
+    color: white;
+    background-color: red;
+}
+  
+.btn-secondary {
+    background-color: #e7e3e3!important;
+    border: 1px solid #a9aeb0!important;
+    color: #050608!important;
+}
+
+.btn {
+    border-radius: 0.2rem!important;
+
+}
+
+.select-btn {
+    margin: 0;
+}
+
+.list-group li{
+    background-color: #e8e8e8;
+    margin: 10px;
+}

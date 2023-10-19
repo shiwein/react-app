@@ -1,0 +1,58 @@
+[
+    {
+        "_id": "RS101",
+        "name": "CS5001 19973 Intensive Foundations of CS SEC 19 Fall 2022 [SEA-2-TR]",
+        "number": "CS5001.19973.202309 ",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15"
+    },
+    {
+        "_id": "RS102",
+        "name": "CS5002 19998 Discrete Structures SEC 08 Fall 2022 [SEA-2-TR]",
+        "number": "CS5002.19998.202309",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15"
+    },
+    {
+        "_id": "RS103",
+        "name": "CS5004 36416 Object-Oriented Design SEC 09 Spring 2023 [SEA-2-TR]",
+        "number": "CS5004.36416.202309",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15"
+    },
+    {
+        "_id": "RS104",
+        "name": "CS5005 36418 Recitation for CS 5004 SEC 15 Spring 2023 [SEA-2-TR]",
+        "number": "CS5005.36418.202309",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15"
+    },
+    {
+        "_id": "RS105",
+        "name": "CS 5008 Data Structures, Algorithms, and Their Applications Within Computer Systems",
+        "number": "CS 5008.12345.202309",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15"
+    },
+    {
+        "_id": "RS106",
+        "name": "CS5009 38902 Recitation for CS 5008 SEC 15 Spring 2023 [VTL-2-OL]",
+        "number": "CS5009.38902.202309",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15"
+    },
+    {
+        "_id": "RS107",
+        "name": "CS5200 20284 Database Management Sys SEC 16 Fall 2023 [SEA-2-TR]",
+        "number": "CS5200.20284.202309",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15"
+    },
+    {
+        "_id": "RS108",
+        "name": "CS5610 17387 Web Development SEC 03 Fall 2023",
+        "number": "CS5610.17387.202309",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15"
+    }
+]
