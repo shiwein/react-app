@@ -25,11 +25,9 @@ import {FiAlignJustify} from "react-icons/fi";
 import "./index.css";
 
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
-  // const {courseNumber} = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
-  // const number =db.courses.find((course) => course.number ===courseNumber);
+  const course = courses.find((course) => course._id === courseId);
 
   return (
     <div>
