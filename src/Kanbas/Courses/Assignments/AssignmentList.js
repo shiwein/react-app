@@ -3,14 +3,13 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import {
     deleteAssignment,
-    selectAssignment
 } from './assignmentsReducer';
 import ConfirmationModal from './ConfirmationModal';
-import AssignmentEditor from "./AssignmentEditor/index";
+// import AssignmentEditor from "./AssignmentEditor/index";
 
 function AssignmentList({onEdit}) {
-    const navigate = useNavigate();
-    const { assignmentId } = useParams();
+    // const navigate = useNavigate();
+    // const { assignmentId } = useParams();
     const assignments = useSelector(state => state.assignmentsReducer.assignments);
     const dispatch = useDispatch();
 

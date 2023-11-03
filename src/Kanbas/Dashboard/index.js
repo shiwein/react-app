@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import db from "../Database";
-import Courses from "../Courses";
+// import Courses from "../Courses";
 
 function Dashboard() {
   const [courses, setCourses] = useState(db.courses);
