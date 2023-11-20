@@ -1,33 +1,36 @@
-import React from "react";
-// import db from "../../Kanbas/Database";
-import { Navigate, Route, Routes, useParams,} from "react-router-dom";
+import { useParams, Route, Routes, Navigate, useLocation } from "react-router";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
-import Announcements from "./Announcements";
-import Collaborations from "./Collaborations";
-import Discussions from "./Discussions";
-import Files from "./Files";
-import Outcomes from "./Outcomes";
-import Pages from "./Pages";
-// import PanoptoVideo from "./PanoptoVideo";
-import People from "./People";
-import Piazza from "./Piazza";
-import Quizzes from "./Quizzes";
-import Rubrics from "./Rubrics";
-import Settings from "./Settings";
-import Syllabus from "./Syllabus";
-import ZoomMeeting from "./ZoomMeeting";
-import {FiAlignJustify} from "react-icons/fi";
+
+
+import { FiAlignJustify } from "react-icons/fi";
 import "./index.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 
-function Courses({ courses }) {
-  const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+
+function Courses() {
+  const {pathname} = useLocation()
+    const [root, kanbas, courseName, id, screen] = pathname.split("/")
+    const {courseId} = useParams()
+    const [course, setCourse] = useState({});
+    const URL = "http://localhost:4000/api/Courses";
+    const findCourseById = async (courseId) => {
+      const response = await axios.get(
+        `${URL}/${courseId}`
+      );
+      setCourse(response.data);
+    };  
+    useEffect(() => {
+        findCourseById(courseId);
+      }, [courseId]); 
+
+
 
   return (
     <div>
@@ -45,24 +48,11 @@ function Courses({ courses }) {
         >
           <Routes>
             <Route path="/" element={<Navigate to="Home" />} />
-            <Route path="Home" element={<Home/>} />
-            <Route path="Modules" element={<Modules/>} />
-            <Route path="Assignments" element={<Assignments/>} />
-            <Route path="Assignments/:assignmentId" element={<AssignmentEditor/>} />
-            <Route path="Grades" element={<Grades/>} />
-            <Route path="Announcements" element={<Announcements />} />
-            <Route path="Collaborations" element={<Collaborations />} />
-            <Route path="Discussions" element={<Discussions />} />
-            <Route path="Files" element={<Files />} />
-            <Route path="Outcomes" element={<Outcomes />} />
-            <Route path="Pages" element={<Pages />} />
-            <Route path="People" element={<People />} />
-            <Route path="Piazza" element={<Piazza />} />
-            <Route path="Quizzes" element={<Quizzes />} />
-            <Route path="Rubrics" element={<Rubrics />} />
-            <Route path="Settings" element={<Settings />} />
-            <Route path="Syllabus" element={<Syllabus />} />
-            <Route path="ZoomMeeting" element={<ZoomMeeting />} />
+            <Route path="Home" element={<Home />} />
+            <Route path="Modules" element={<Modules />} />
+            <Route path="Assignments" element={<Assignments />} />
+            <Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
+            <Route path="Grades" element={<Grades />} />
           </Routes>
         </div>
       </div>

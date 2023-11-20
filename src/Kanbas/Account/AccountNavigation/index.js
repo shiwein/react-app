@@ -3,7 +3,7 @@ import "./index.css";
 
 
 function AccountNavigation() {
-    const links = ["Notifications", "Profile", "Files", "Settings", "ePortfolios", "SharedContent", "TheHub", "QwicklyCourseTools", "GlobalAnnouncements"]
+    const links = ["Notifications", "Profile", "Files", "Settings", "ePortfolios",]
     //const { courseId } = useParams();
     const { pathname } = useLocation();
     return (        

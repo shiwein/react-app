@@ -11,7 +11,7 @@ import {BiHelpCircle} from "react-icons/bi";
 import NEU_LOGO from "./NEU_LOGO.jpeg";
 import "./index.css";
 function KanbasNavigation() {
-  const links = ["Account", "Dashboard", "Courses", "Calender", "Inbox", "History", "Studio", "Commons", "Help"];
+  const links = ["Account", "Dashboard", "Courses"];
 
   const linkToIconMap = {
     Account: <BiUserCircle className="wd-icon-account" />,

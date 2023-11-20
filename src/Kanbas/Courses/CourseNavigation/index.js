@@ -4,7 +4,7 @@ import "./index.css";
 
 
 function CourseNavigation() {
-    const links = ["Home", "Modules", "Piazza", "ZoomMeeting", "Assignments", "Quizzes", "Grades", "People", "PanoptoVideo", "Discussions", "Announcements", "Pages", "Files", "Rubrics", "Outcomes", "Collaborations", "Syllabus", "Settings"];
+    const links = ["Home", "Modules", "Assignments", "Grades"];
     const { courseId } = useParams();
     const { pathname } = useLocation();
     return (
