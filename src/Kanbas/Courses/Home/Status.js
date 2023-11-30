@@ -13,10 +13,10 @@ function Status({course}) {
             <button className="btn btn-secondary me-1"><FaBan className="me-1"/>Unpublish</button>
             <button className="btn btn-success"><AiOutlineCheckCircle className="me-1" style={{color:"rgba(245, 247, 245, 0.905)"}}/>Publish</button>
             <ul className="list-group mt-3">
-                {list.map((option, index)=> (<li key={index} className="list-group-item list-group-item-secondary mb-1" style={{borderRadius:"0px"}}><a  href="#" className="statusOptionLink">{option}</a></li>))}
+                {list.map((option, index)=> (<li key={index} className="list-group-item list-group-item-secondary mb-1" style={{borderRadius:"0px"}}><a  href="/Users/weinanshi/Documents/5610/react-app/src/Kanbas/Courses/index.js" className="statusOptionLink">{option}</a></li>))}
             </ul>
             <h3 class="mt-3">Comming Up</h3>
-            <a href="#" className="statusEventLink">View Calendar</a>
+            <a href="/Users/weinanshi/Documents/5610/react-app/src/Kanbas/Courses/index.js" className="statusEventLink">View Calendar</a>
 
             <ul>
                 {/* <li style={{fontSize:"25px"}}><a href="#" className="statusEventLink">Lecture  Sep 7 at 11:45am</a></li> */}
