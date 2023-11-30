@@ -1,15 +1,15 @@
-const courses = require('./courses.json');
-const modules = require('./modules.json');
-const assignments = require('./assignments.json');
-const users = require('./users.json');
-const grades = require('./grades.json');
-const enrollments = require('./enrollments.json');
+import courses from "./courses.json";
+import modules from "./modules.json";
+import assignments from "./assignments.json";
+import users from "./users.json";
+import enrollments from "./enrollments.json";
+import grades from "./grades.json"
 
 export default {
-  courses,
-  modules,
-  assignments,
-  users,
-  grades,
-  enrollments,
+    courses: courses,
+    modules: modules,
+    assignments: assignments,
+    users: users,
+    enrollments:enrollments,
+    grades: grades
 };

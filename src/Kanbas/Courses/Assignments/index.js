@@ -4,14 +4,14 @@ import { LuBookKey } from "react-icons/lu";
 import { PiDotsSixVerticalBold } from "react-icons/pi";
 import "./index.css";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  selectAssignments,
-  deleteAssignment,
-  selectAssignment,
-  resetAssignment,
-  // updateAssignment,
-}
-  from "./assignmentsReducer";
+import { 
+    selectAssignments,
+    deleteAssignment,
+    selectAssignment, 
+    resetAssignment,
+    updateAssignment,
+    }
+from "./assignmentsReducer";   
 import { useEffect } from "react";
 import * as client from "./client.js";
 
@@ -24,8 +24,8 @@ function Assignments() {
     client.findAssignmentsForCourse(courseId)
       .then((assignments) =>
         dispatch(selectAssignments(assignments))
-      );
-  }, [courseId, dispatch]);
+    );
+  }, [courseId]);
 
   const handleDeleteAssignment = (assignmentId) => {
     client.delteAssignment(assignmentId).then((status) => {
@@ -38,42 +38,40 @@ function Assignments() {
     const confirmDelete = window.confirm('Are you sure you want to remove the assignment?');
     if (confirmDelete) {
       handleDeleteAssignment(assignment._id);
-    } else { dispatch(resetAssignment) }
+    } else {dispatch(resetAssignment)}
   };
   return (
     <div>
-      <input className="form-control w-25" style={{ display: "inline" }} type="text" placeholder="Search for Assignments" />
-      <div className="d-flex flex-nowrap float-end">
-        <button className="btn btn-secondary me-1"><AiOutlinePlus className="me-1" />Group</button>
-        <button className="btn btn-danger me-1">
-          <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-            className="clearLink">
-            <AiOutlinePlus className="me-1" />
-            Assignment</Link>
-        </button>
-      </div>
-      <hr />
+      <input className="form-control w-25" style={{display: "inline"}} type="text" placeholder="Search for Assignments"/>
+        <div className="d-flex flex-nowrap float-end">
+            <button className="btn btn-secondary me-1"><AiOutlinePlus className="me-1"/>Group</button>
+            <button  className="btn btn-danger me-1">
+              <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+              className="clearLink">
+              <AiOutlinePlus className="me-1"/>
+              Assignment</Link>
+            </button>
+        </div>
+      <hr/>
       <h2>Assignments for course {courseId}</h2>
       <div className="list-group me-2">
         {assignments.map((assignment) => (
           <div className="list-group-item">
             <Link className="clearLink2"
               key={assignment._id}
-              onClick={() => {
-                dispatch(selectAssignment(assignment))
-              }}
+              onClick={()=> {
+                dispatch(selectAssignment(assignment))}} 
               to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-            >
-              <PiDotsSixVerticalBold className="me-1" />
-              <LuBookKey className="me-5" style={{ color: "rgb(55, 194, 111)" }} />
+              >
+              <PiDotsSixVerticalBold className="me-1"/>
+              <LuBookKey className="me-5" style={{color:"rgb(55, 194, 111)"}}/>
               {assignment.title}
             </Link>
             <div className="d-inline-block float-end">
-              <button onClick={(event) => {
-                event.preventDefault();
-                handleDeleteClick(assignment)
-              }}
-                className="btn  btn-secondary">
+              <button onClick={(event)=> {
+              event.preventDefault();
+              handleDeleteClick(assignment)}} 
+              className="btn  btn-secondary">
                 Delete
               </button>
             </div>
