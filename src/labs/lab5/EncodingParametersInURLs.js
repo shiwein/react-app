@@ -25,8 +25,6 @@ function EncodingParametersInURLs() {
 
     useEffect(() => {
         fetchWelcome();
-        fetchSum(a, b);
-        fetchSubtraction(a, b);
     }, []);
 
 

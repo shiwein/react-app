@@ -1,6 +1,6 @@
 import { FaBan } from "react-icons/fa";
 import { AiOutlineCheckCircle } from "react-icons/ai";
-import { useParams } from "react-router";
+// import { useParams } from "react-router";
 import "./index.css";
 
 function Status({course}) {
