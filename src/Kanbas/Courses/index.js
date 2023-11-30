@@ -13,7 +13,7 @@ import axios from "axios";
 
 function Courses() {
     const {pathname} = useLocation()
-    const [root, kanbas, courseName, id, screen] = pathname.split("/")
+    const [screen] = pathname.split("/")
     const {courseId} = useParams()
     const [course, setCourse] = useState({});
     // const API_BASE = process.env.REACT_APP_API_BASE;

@@ -24,7 +24,6 @@ addNewCourse, deleteCourse, updateCourse}) {
       <div className="d-flex flex-row flex-wrap mt-4">
         {courses.map((course) => (
           <div className="card w-25 mb-4 ms-4">
-            <img src="/images/blue.jpg" className="card-img-top" alt="can't find image..."/>
             <div className="card-body">
               <h5 className="card-title">{course.name}</h5>
               <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="btn btn-primary">

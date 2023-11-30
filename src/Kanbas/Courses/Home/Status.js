@@ -5,7 +5,7 @@ import "./index.css";
 
 function Status({course}) {
     const list = ["Import Existing Content", "Import From Commons", "Choose Home Page", "View Course Stream", "New Announcement", "New Analytics", "View Course"];
-    const { courseId } = useParams();
+    // const { courseId } = useParams();
     // const course = courses.find(course =>(course._id === courseId))
     return (
         <>
