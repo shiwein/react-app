@@ -17,20 +17,23 @@ function Status({course}) {
             </ul>
             <h3 class="mt-3">Comming Up</h3>
             <a href="#" className="statusEventLink">View Calendar</a>
+
             <ul>
-                <li style={{fontSize:"25px"}}><a href="#" className="statusEventLink">Lecture  Sep 7 at 11:45am</a></li>
+                {/* <li style={{fontSize:"25px"}}><a href="#" className="statusEventLink">Lecture  Sep 7 at 11:45am</a></li> */}
                 {/* <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at<br/>
                 11:45am</a></li>
                 <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li> */}
             </ul> 
+
             <ul>
-                <li style={{fontSize:"25px"}}><a href="#" className="statusEventLink">Lecture  Sep 7 at 11:45am</a></li>
+                {/* <li style={{fontSize:"25px"}}><a href="#" className="statusEventLink">Lecture  Sep 7 at 11:45am</a></li> */}
                 {/* <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at<br/>
                 11:45am</a></li>
                 <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li> */}
             </ul> 
+
             <ul>
-                <li style={{fontSize:"25px"}}><a href="#" className="statusEventLink">Lecture  Sep 7 at 11:45am</a></li>
+                {/* <li style={{fontSize:"25px"}}><a href="#" className="statusEventLink">Lecture  Sep 7 at 11:45am</a></li> */}
                 {/* <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at<br/>
                 11:45am</a></li>
                 <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li> */}
