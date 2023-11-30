@@ -1,28 +1,22 @@
-// import { Link } from "react-router-dom";
 import ModuleList from "../Modules/ModuleList";
-import "./index.css";
+import ModuleBar from "../Modules/ModuleBar";
+import Status from "./Status";
+// import { useParams } from "react-router";
+// import db from "../../Database";
 
-
-
-function Home() {
+function Home({course}) {
+  // const { courseId } = useParams();
+  // const flag = db.modules.find((module)=> module.course === courseId);
+  // if (flag !== "undefined") 
   return (
-    <div>
-      <div className="row">
-        <div>
-          <button className="btn btn-danger wd-float-right">+ Module</button>
-          <button className="btn wd-float-right select-btn">
-            <select className="form-select">
-              <option value="All">Publish All</option>
-              <option>1</option>
-              <option>2</option>
-            </select>
-          </button>
-          <button className="btn btn-secondary wd-float-right">Collapse All</button>
-          <button className="btn btn-secondary wd-float-right">View Progress</button>
-        </div><hr />
-        <div>
-          <ModuleList />
-        </div>
+    <div className="row ms-5">
+      <div className="col-8">
+        <ModuleBar/>
+        <br/>
+        <ModuleList />
+      </div>
+      <div className="col d-none d-lg-block ms-4 me-5">
+        <Status course={course}/>
       </div>
     </div>
   );

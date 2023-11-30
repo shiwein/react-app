@@ -1,39 +1,13 @@
-.main {
-    display: flex;
-    flex-direction: column;
-    width: 100%; 
+.breadCrumb {
+    margin: 20px;
+    font-size: 18px;
+    /* color: rgb(221, 24, 24); */
 }
-
-.braadcrumbs {
-    flex-shrink: 0; /* 这确保高度不会改变 */
-    width: 100%; /* 这会使元素延伸到其父容器的全部宽度 */
+.breadCrumb a {
+    text-decoration: none;
+    color: rgb(221, 24, 24);
 }
-  
-.container-flex {
-    display: flex;
+.breadCrumb a:hover {
+    text-decoration: underline; 
+    color: rgb(221, 24, 24);
 }
-  
-.navbar-div {
-    flex: 2;
-    /* 您可以为这部分添加其他样式，例如背景颜色、边距等 */
-}
-  
-.main-content-div {
-    flex: 6;
-    flex-grow: 1;
-    /* 您可以为这部分添加其他样式 */
-}
-  
-.sidebar-div {
-    flex: 2;
-    /* 您可以为这部分添加其他样式 */
-}
-
-.course-name {
-    color: red;
-}
-
-.red-text {
-  color: red;
-}
-

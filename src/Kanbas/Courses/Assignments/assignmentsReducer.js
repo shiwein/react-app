@@ -1,56 +1,49 @@
+// import db from "../../Database";
 import { createSlice } from "@reduxjs/toolkit";
-import db from "../../Database";
-
 
 const initialState = {
-    assignments: db.assignments,
-    assignment: { 
-        name: "New Assignment", 
-        description: "New Description", 
-        Points:"100",
-        Due: "2023-11-02",
-        AvailableFrom: "2023-11-02",
-        Until:"2023-11-02",
-    },
-    selectedAssignment: null,
+    assignments: [],
+    assignment: {title: "New Assignment"}
 };
 
-
-const assignmentsSlice = createSlice({
+const assignmentsslice = createSlice({
     name: "assignments",
     initialState,
     reducers: {
+        selectAssignments: (state, action) => {
+            state.assignments = action.payload;
+          },
         addAssignment: (state, action) => {
-            state.assignments = [
-                { ...action.payload, _id: new Date().getTime().toString() },
-                ...state.assignments,
-            ];
-        },
+            state.assignments = [{...action.payload, _id: new Date().getTime().toString()}
+            , ...state.assignments];
+            // reset assignment state
+            state.assignment = initialState.assignment;
+            }
+            ,
         deleteAssignment: (state, action) => {
-            state.assignments = state.assignments.filter(
-                (assignment) => assignment._id !== action.payload
-            );
-        },
+            state.assignments = state.assignments.filter(assignment => assignment._id !== action.payload);
+             // reset assignment state
+             state.assignment = initialState.assignment;
+            },
         updateAssignment: (state, action) => {
-            state.assignments = state.assignments.map((assignment) => {
-                if (assignment._id === action.payload._id) {
+            state.assignments = state.assignments.map(assignment => 
+                {if (assignment._id === action.payload._id) {
                     return action.payload;
-                } else {
-                    return assignment;
-                }
+                } else {return assignment}
             });
-        },
+            // reset assignment state
+            state.assignment = initialState.assignment;
+            },
         selectAssignment: (state, action) => {
-            const assignment = state.assignments.find(a => a._id === action.payload);
-            state.selectedAssignment = assignment || null;
-        },
-        setAssignment: (state, action) => {
             state.assignment = action.payload;
-        },
-    },
-});
+            }
+            , 
+        resetAssignment: (state) => {
+            state.assignment = initialState.assignment
+            }
+        }
+    });
 
-
-export const { addAssignment, deleteAssignment,
-    updateAssignment, selectAssignment, setAssignment } = assignmentsSlice.actions;
-export default assignmentsSlice.reducer;
+export const {addAssignment, deleteAssignment, updateAssignment,
+                selectAssignment, resetAssignment, selectAssignments} = assignmentsslice.actions;
+export default assignmentsslice.reducer;

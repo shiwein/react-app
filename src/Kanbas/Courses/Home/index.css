@@ -1,28 +1,17 @@
-.wd-float-right {
-    float: right;
-    margin: 5px;
-}
-.red-button {
-    color: white;
-    background-color: red;
-}
-  
-.btn-secondary {
-    background-color: #e7e3e3!important;
-    border: 1px solid #a9aeb0!important;
-    color: #050608!important;
+.statusOptionLink {
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(208, 15, 15);
+    font-weight: 400;
 }
 
-.btn {
-    border-radius: 0.2rem!important;
 
-}
-
-.select-btn {
-    margin: 0;
-}
-
-.list-group li{
-    background-color: #e8e8e8;
-    margin: 10px;
+.statusEventLink {
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(208, 15, 15);
+    text-align: center;
+    font-weight: 400;
+    height: 40px; 
 }

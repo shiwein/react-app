@@ -1,84 +1,82 @@
 import React, { useState } from "react";
-import { useDispatch } from 'react-redux';
-import { useNavigate } from "react-router-dom";
-import { addAssignment, updateAssignment } from "../assignmentsReducer";
+import { useNavigate, useParams, Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import AssignmentEditorBar from "./AssignmentEditBar";
+import { addAssignment, selectAssignment, updateAssignment, resetAssignment } from "../assignmentsReducer";
+import * as client from "../client.js";
 
-function AssignmentEditor({ initialData, propData, courseId }) { // 1. Extract courseId from props
-    const [assignment, setAssignment] = useState({
-        name: initialData?.name || "New Assignment",
-        description: initialData?.description || "New Description",
-        dueDate: initialData?.Due || "2023-11-02",
-        availableFromDate: initialData?.AvailableFrom || "2023-11-02",
-        availableUntilDate: initialData?.Until || "2023-11-02",
-    });
-    
-    const dispatch = useDispatch();
+function AssignmentEditor() {
+    const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+    const { courseId } = useParams();
     const navigate = useNavigate();
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setAssignment(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
-
     const handleSave = () => {
-        if (initialData) {
-            const updatedAssignment = {
-                ...initialData,
-                ...assignment
-            };
-            dispatch(updateAssignment(updatedAssignment));
-        } else {
-            const newAssignment = {
-                ...assignment,
-                _id: new Date().getTime().toString()
-            };
-            dispatch(addAssignment(newAssignment));
-        }
-        navigate(`/Courses/${courseId}/assignments/*`); // 2. Use backticks for template literals
+        console.log("Actually saving assignment TBD in later assignments");
+        navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
-
-    const handleCancel = () => {
-        navigate(`/Courses/${courseId}/assignments`); // 3. Navigate back to the assignments list on cancel
+    const dispatch = useDispatch();
+    const handleAddAssignment = () => {
+        client.createAssignment(courseId, assignment).then((assignment) => {
+            dispatch(addAssignment(assignment));
+        });
     };
-
+    const handleUpdateAssignment = async () => {
+        client.updateAssignment(assignment);
+        dispatch(updateAssignment(assignment));
+    };
+    const [text, setText] = useState("New Assignment Description")
     return (
         <div>
-            <input 
-                name="name" 
-                value={assignment.name} 
-                onChange={handleInputChange} 
-                placeholder="Name" 
-            />
-            <textarea 
-                name="description"
-                value={assignment.description} 
-                onChange={handleInputChange} 
-                placeholder="Description"
-            ></textarea>
-            <input 
-                type="date" 
-                name="dueDate" 
-                value={assignment.dueDate} 
-                onChange={handleInputChange} 
-            />
-            <input 
-                type="date" 
-                name="availableFromDate" 
-                value={assignment.availableFromDate} 
-                onChange={handleInputChange} 
-            />
-            <input 
-                type="date" 
-                name="availableUntilDate" 
-                value={assignment.availableUntilDate} 
-                onChange={handleInputChange} 
-            />
+            <AssignmentEditorBar />
+            <hr />
+            <div className="me-2">
+                <h3>Assignment Name</h3>
+                <input value={assignment.title}
+                    onChange={(e) => dispatch(selectAssignment({ ...assignment, title: e.target.value }))}
+                    className="form-control mb-3 me-1" />
+                <textarea value={text}
+                    onChange={(e) => setText(e.target.value)}
+                    className="form-control mb-3">
+                </textarea>
+                <div className="row mb-3">
+                    <div className="col-3">
+                        <h3 className="text-end mb-4"><label className="form-label me-4">Assign</label></h3>
+                    </div>
+                    <div className="col">
+                        <div className="border border-secondary-subtle p-3 mb-0 w-50">
+                            <h6><label className="form-label" for="assignTo"> Assign To</label></h6>
+                            <input defaultValue={""} type="text" className="form-control" id="assignTo" placeholder="Everyone" />
+                            <h6><label class="form-label mt-3" for="due">Due</label></h6>
+                            <input defaultValue={"Oct 01,2023,11:59 PM"} type="date" className="form-control" id="due" />
+                            <div className="row">
+                                <div className="col-6">
+                                    <h6><label className="form-label mt-3" for="avalable">Available from</label></h6>
+                                    <input defaultValue={""} type="date" className="form-control" id="avalable" name="Oct 01,2023,11:59 PM" />
+                                </div>
+                                <div className="col-6">
+                                    <h6><label className="form-label mt-3" for="until">Until</label></h6>
+                                    <input defaultValue={""} type="date" className="form-control" id="until" name="Oct 01,2023,11:59 PM" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <button onClick={handleSave}>Save</button>
-            <button onClick={handleCancel}>Cancel</button>
+                <div className="d-flex flex-nowrap float-end">
+                    <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
+                        className="btn btn-danger me-1" onClick={() => dispatch(resetAssignment())}>
+                        Cancel
+                    </Link>
+                    <button onClick={() => {
+                        if (assignment._id === undefined) { handleAddAssignment() }
+                        else { handleUpdateAssignment(assignment) };
+                        handleSave()
+                    }} className="btn btn-success me-2">
+                        Save
+                    </button>
+                </div>
+                <br />
+            </div>
+            <hr />
         </div>
     );
 }
