@@ -32,14 +32,15 @@ function Assignments() {
       dispatch(deleteAssignment(assignmentId));
     });
   };
-  // const courseAssignments = assignments.filter(
-  //   (assignment) => assignment.course === courseId);
+  const courseAssignments = assignments.filter(
+    (assignment) => assignment.course === courseId);
   const handleDeleteClick = (assignment) => {
     const confirmDelete = window.confirm('Are you sure you want to remove the assignment?');
     if (confirmDelete) {
       handleDeleteAssignment(assignment._id);
     } else {dispatch(resetAssignment)}
   };
+
   return (
     <div>
       <input className="form-control w-25" style={{display: "inline"}} type="text" placeholder="Search for Assignments"/>
