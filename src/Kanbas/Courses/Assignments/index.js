@@ -25,7 +25,7 @@ function Assignments() {
       .then((assignments) =>
         dispatch(selectAssignments(assignments))
     );
-  }, [courseId]);
+  }, [courseId, dispatch]);
 
   const handleDeleteAssignment = (assignmentId) => {
     client.delteAssignment(assignmentId).then((status) => {
