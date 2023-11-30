@@ -24,7 +24,7 @@ export const delteAssignment = async (assignmentId) => {
     return response.data;
 };
 export const updateAssignment = async (assignment) => {
-    const response = await axios
-        .put(`${ASSIGNMENTS_URL}/${assignment._id}`, assignment);
+    const response = await axios.put(
+        `${ASSIGNMENTS_URL}/${assignment._id}`, assignment);
     return response.data;
 };
