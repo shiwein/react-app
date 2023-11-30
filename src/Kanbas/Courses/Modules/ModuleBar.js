@@ -13,9 +13,9 @@ function ModuleBar() {
                     Publish All
                 </button>
                 <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Publish All</a></li>
-                <li><a className="dropdown-item" href="#">Publish all items and modules</a></li>
-                <li><a className="dropdown-item" href="#">Unpublish</a></li>
+                <li><a className="dropdown-item" href="/Users/weinanshi/Documents/5610/react-app/src/Kanbas/Courses/index.js">Publish All</a></li>
+                <li><a className="dropdown-item" href="/Users/weinanshi/Documents/5610/react-app/src/Kanbas/Courses/index.js">Publish all items and modules</a></li>
+                <li><a className="dropdown-item" href="/Users/weinanshi/Documents/5610/react-app/src/Kanbas/Courses/index.js">Unpublish</a></li>
                 </ul>
             </div>
             <select className="form-select btn btn-sm btn-secondary me-1" style={{width:"90px"}}>
