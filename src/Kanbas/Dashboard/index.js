@@ -10,7 +10,7 @@ addNewCourse, deleteCourse, updateCourse}) {
       <hr/>
       <h2>Published Courses ({courses.length})</h2>
       <hr/>
-      <h5>Course</h5>
+      {/* <h5>Course</h5>
       <input value={course.name} className="form-control mb-1" onChange={(e) => setCourse({ ...course, name: e.target.value }) }/>
       <input value={course.number} className="form-control mb-1" onChange={(e) => setCourse({ ...course, number: e.target.value }) }/>
       <input value={course.startDate} className="form-control mb-1" type="date" onChange={(e) => setCourse({ ...course, startDate: e.target.value }) } />
@@ -20,7 +20,7 @@ addNewCourse, deleteCourse, updateCourse}) {
       </button>
       <button onClick={updateCourse} className="btn btn-primary">
         Update
-      </button>
+      </button> */}
       <div className="d-flex flex-row flex-wrap mt-4">
         {courses.map((course) => (
           <div className="card w-25 mb-4 ms-4">
