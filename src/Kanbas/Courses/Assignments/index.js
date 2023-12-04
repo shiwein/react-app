@@ -9,7 +9,7 @@ import {
     deleteAssignment,
     selectAssignment, 
     resetAssignment,
-    // updateAssignment,
+    updateAssignment,
     }
 from "./assignmentsReducer";   
 import { useEffect } from "react";
