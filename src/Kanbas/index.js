@@ -9,8 +9,6 @@ import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
 
-// a6
-
 function Kanbas() {
   const [courses, setCourses] = useState([]);
   //const URL = "http://localhost:4000/api/courses";
