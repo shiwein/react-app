@@ -19,7 +19,7 @@ function Courses() {
     // const API_BASE = process.env.REACT_APP_API_BASE;
     // const URL = `${API_BASE}/courses`;
     // const URL = "http://localhost:4000/api/courses";
-    const URL ="https://kanbas-node-server-app-a6-iz9r.onrender.com";
+    const URL ="https://kanbas-node-server-app-a6-z140.onrender.com";
     const findCourseById = async (courseId) => {
       const response = await axios.get(
         `${URL}/${courseId}`
