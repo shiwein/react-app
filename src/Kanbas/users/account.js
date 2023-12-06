@@ -1,7 +1,7 @@
 import * as client from "./client";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+
 function Account() {
     const { id } = useParams();
     const [account, setAccount] = useState(null);
@@ -33,35 +33,41 @@ function Account() {
             <h1>Account</h1>
             {account && (
                 <div>
-                    <input className="form-control w-50 mb-1" value={account.password}
-                        onChange={(e) => setAccount({
-                            ...account,
-                            password: e.target.value
-                        })} />
-                    <input className="form-control w-50 mb-1" value={account.firstName}
-                        onChange={(e) => setAccount({
-                            ...account,
-                            firstName: e.target.value
-                        })} />
-                    <input className="form-control w-50 mb-1" value={account.lastName}
-                        onChange={(e) => setAccount({
-                            ...account,
-                            lastName: e.target.value
-                        })} />
-                    <input className="form-control w-50 mb-1" value={account.dob}
-                        onChange={(e) => setAccount({
-                            ...account,
-                            dob: e.target.value
-                        })} />
-                    <input className="form-control w-50 mb-1" value={account.email}
-                        onChange={(e) => setAccount({
-                            ...account,
-                            email: e.target.value
-                        })} />
-                    <select className="form-select w-50 mb-1" onChange={(e) => setAccount({
-                        ...account,
-                        role: e.target.value
-                    })}>
+                    <input
+                        className="form-control w-50 mb-1"
+                        value={account.password}
+                        onChange={(e) =>
+                            setAccount({ ...account, password: e.target.value })
+                        }
+                    />
+                    <input
+                        className="form-control w-50 mb-1"
+                        value={account.firstName}
+                        onChange={(e) =>
+                            setAccount({ ...account, firstName: e.target.value })
+                        }
+                    />
+                    <input
+                        className="form-control w-50 mb-1"
+                        value={account.lastName}
+                        onChange={(e) =>
+                            setAccount({ ...account, lastName: e.target.value })
+                        }
+                    />
+                    <input
+                        className="form-control w-50 mb-1"
+                        value={account.dob}
+                        onChange={(e) => setAccount({ ...account, dob: e.target.value })}
+                    />
+                    <input
+                        className="form-control w-50 mb-1"
+                        value={account.email}
+                        onChange={(e) => setAccount({ ...account, email: e.target.value })}
+                    />
+                    <select
+                        className="form-select w-50 mb-1"
+                        onChange={(e) => setAccount({ ...account, role: e.target.value })}
+                    >
                         <option value="USER">User</option>
                         <option value="ADMIN">Admin</option>
                         <option value="FACULTY">Faculty</option>
