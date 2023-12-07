@@ -38,5 +38,4 @@ reducers: {
   });
 export const {addModule, deleteModule, updateModule,
     setModule, setModules} = modulesSlice.actions;
-export default modulesSlice.reducer;  
-  
+export default modulesSlice.reducer;
