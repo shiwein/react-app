@@ -11,7 +11,7 @@ function WorkingWithObjects() {
         score: 0,
     });
 
-    const URL = "https://kanbas-node-server-app-vj5k.onrender.com/lab5/assignment";
+    const URL = "https://kanbas-node-server-app-a6-z140.onrender.com/lab5/assignment";
     const fetchAssignment = async () => {
         const response = await axios.get(`${URL}`);
         setAssignment(response.data);

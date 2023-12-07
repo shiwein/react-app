@@ -62,7 +62,7 @@ function WorkingWithArrays() {
         fetchTodos();
       }, []);    
     
-    const API = "https://kanbas-node-server-app-vj5k.onrender.com/lab5/todos";
+    const API = "https://kanbas-node-server-app-a6-z140.onrender.com/lab5/todos";
     return (
       <div>
         <h3>Working with Arrays</h3>
