@@ -32,14 +32,14 @@ function WorkingWithObjects() {
             <h3>Working With Object</h3>
             <br />
             <h4>Retrieving Object</h4>
-            <a href="https://kanbas-node-server-app-vj5k.onrender.com/lab5/assignment"
+            <a href="https://kanbas-node-server-app-a6-z140.onrender.com/lab5/assignment"
                 className="btn btn-primary me-2">
                 Get Assignment
             </a>
             <br /><br />
             <h4>Retrieving Properties</h4>
             <a
-                href="https://kanbas-node-server-app-vj5k.onrender.com/lab5/assignment/title"
+                href="https://kanbas-node-server-app-a6-z140.onrender.com/lab5/assignment/title"
                 className="btn btn-primary me-2">
                 Get Title
             </a>
